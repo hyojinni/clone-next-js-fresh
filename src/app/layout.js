@@ -1,8 +1,7 @@
 import Link from "next/link";
 import './globals.css';
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+// import { Inter } from 'next/font/google'
+// const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
 	title: 'Next.js 초급과정 학습',
 	description: 'Next.js 초급과정 학습',
@@ -10,10 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="ko">
-			<head>
-				<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
-			</head>
-			<body className={inter.className}>
+			<head />
+			{/* <body className={inter.className}> */}
+			<body>
 				<div className="wrapper">
 					<div className="navbar">
 						<Link href="/">Home</Link>

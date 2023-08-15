@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     server: {
-        port: 2000,
+        port: 3000,
         host: '0.0.0.0',
         timing: false
     }

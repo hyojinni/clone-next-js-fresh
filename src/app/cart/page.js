@@ -26,6 +26,7 @@ export default function Cart() {
                     cartItems.map((item, index) => {
                         return (
                             <CartItem
+                                key={item.index}
                                 img={item.img}
                                 title={item.title}
                                 price={item.price}
@@ -41,7 +42,7 @@ export default function Cart() {
 
 function CartItem(props) {
     return (
-        <div className="cart-item">
+        <div className="cart-item" key={props.key}>
             <img src={`https://picsum.photos/id/${props.img}/48/48`} alt={props.title} />
             <p>{props.title}</p>
             <p>{props.price}</p>
