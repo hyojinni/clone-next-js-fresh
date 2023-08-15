@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import './globals.css';
 // import { Inter } from 'next/font/google'
 // const inter = Inter({ subsets: ['latin'] })
@@ -7,17 +9,17 @@ export const metadata = {
 	description: 'Next.js 초급과정 학습',
 }
 export default function RootLayout({ children }) {
+	const currentRoute = usePathname();
 	return (
 		<html lang="ko">
 			<head />
-			{/* <body className={inter.className}> */}
 			<body>
 				<div className="wrapper">
-					<div className="navbar">
-						<Link href="/">Home</Link>
-						<Link href="/list">List</Link>
-						<Link href="/cart">Cart</Link>
-					</div>
+					<nav className="navbar">
+						<Link key="home" href="/" className={currentRoute === "/" ? "active" : ""}>Home</Link>
+						<Link key="list" href="/list" className={currentRoute === "/list" ? "active" : ""}>List</Link>
+						<Link key="cart" href="/cart" className={currentRoute === "/cart" ? "active" : ""}>Cart</Link>
+					</nav>
 					<div className="container">
 						{children}
 					</div>

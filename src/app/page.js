@@ -1,13 +1,15 @@
 // import Image from 'next/image'
 // import styles from './page.module.css'
 
+import React, { ReactElement } from "react";
+
 export default function Home() {
   // let name = "lee"
   // let link = "http://www.google.com"
   return (
     <div>
       <h1 style={{ color: "#4376a6", fontSize: "30px" }}>Next.js 초급과정 학습</h1>
-      <div class="code-box" contenteditable="true">
+      <div className="code-box" contentEditable={true} suppressContentEditableWarning={true}>
         <p>링크: <span className="text-aquamarine">&#123; link &#125;</span></p>
         <p>CSS class경우: <span className="text-aquamarine">className=&quot;box&quot;</span></p>
         <p>style 정의할 경우: <span className="text-aquamarine">style=&#123;&#123; color: &quot;#4376a6&quot;, fontSize: &quot;30px&quot; &#125;&#125;</span></p>

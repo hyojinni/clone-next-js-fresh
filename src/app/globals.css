@@ -47,7 +47,10 @@ html, body {
     font-weight: 700;
     text-decoration: none;
 }
-.navbar a:hover, .navbar a:link, .navbar a:active{
+.navbar a:hover, 
+.navbar a:link, 
+.navbar a:active,
+.navbar a.active {
     color: #1967d2;
 }
 

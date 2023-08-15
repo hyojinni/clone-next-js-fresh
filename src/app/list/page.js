@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import './../page.module.css'
 
 import { useState } from "react"
